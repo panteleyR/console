@@ -1,0 +1,22 @@
+{
+    "name": "lilith/console",
+    "description": "Common interface for HTTP messages",
+    "keywords": [],
+    "homepage": "https://github.com/panteleyR/console",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rost",
+            "homepage": "https://google.com/"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "lilith/dependency-injection": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lilith\\Console\\": "src/"
+        }
+    }
+}
