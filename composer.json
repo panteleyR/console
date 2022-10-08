@@ -1,13 +1,13 @@
 {
     "name": "lilith/console",
-    "description": "Common interface for HTTP messages",
+    "description": "Cli kernel",
     "keywords": [],
     "homepage": "https://github.com/panteleyR/console",
     "license": "MIT",
     "authors": [
         {
-            "name": "Rost",
-            "homepage": "https://google.com/"
+            "name": "Rostislav",
+            "homepage": "https://github.com/panteleyR/"
         }
     ],
     "require": {

@@ -10,10 +10,12 @@ class Router implements RouterInterface
 {
     protected array $routes = [];
 
-    public function execute(ContainerInterface $container, ArgvInput $argvInput): void
+    public function __construct(protected ContainerInterface $container) {}
+
+    public function execute(ArgvInput $argvInput): void
     {
         $routeClass = $this->findRoute($argvInput->getCommandName());
-        $container->get($routeClass)->execute($argvInput);
+        $this->container->get($routeClass)->execute($argvInput);
     }
 
     public function findRoute(string $commandName): string
@@ -24,7 +26,7 @@ class Router implements RouterInterface
             }
         }
 
-        throw new \Exception('Route not found');
+        throw new \RuntimeException('Route not found');
     }
 
     public function setRoutes(array $routes): void

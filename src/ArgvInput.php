@@ -36,7 +36,7 @@ class ArgvInput
                     $this->options[$name] = $value;
                 }
             } else if ($arg[0] === '-') {
-                for ($i = 1; $i < strlen($arg); $i++) {
+                for ($i = 1, $iMax = strlen($arg); $i < $iMax; $i++) {
                     $this->flags[] = $arg[$i];
                 }
             }

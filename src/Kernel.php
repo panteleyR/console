@@ -16,7 +16,7 @@ class Kernel implements KernelInterface
             $router = $this->container->get('console.router');
             $router->execute($argvInput);
         } catch (\Throwable $e) {
-            throw new $e;
+            throw $e;
         }
     }
 }
